@@ -1,0 +1,168 @@
+.collectionCarousel{
+  overflow: hidden;
+  padding: 2rem;
+  position: relative;
+
+   @media screen and (max-width: 1024px){
+     margin-inline: 6rem;
+   }
+}
+.inner{
+  display: flex;
+  gap: 4.6rem;
+  transition: transform .3s;
+}
+.btn__action{
+  position: absolute;
+  right: 2rem;
+  bottom: 20vh;
+  display: flex;
+  gap: .5rem;
+  background-color: #a5baa9;
+  padding: 1rem;
+
+  & > button{
+    padding: .8rem;
+    font-weight: 900;
+    display: inline-flex;
+    cursor: pointer;
+    color: white;
+    background: #4B614A;
+    border: none;
+
+    &:disabled{
+      opacity: .4;
+    }
+
+    & > svg{
+      width: 2rem;
+      height: 2rem;
+    }
+
+  }
+}
+.collectionCarousel__item{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 47rem;
+  width: 28rem;
+  min-width: 28rem;
+  background-color: white;
+
+  &:hover {
+    box-shadow: 0 0 .13rem  rgb(0 0 0/.25);
+  }
+
+}
+
+.container{
+  position: relative;
+  display: flex;
+  justify-content: end;
+  gap: 2rem;
+  flex-direction: column;
+  padding: 1rem 1.5rem;
+  overflow: hidden;
+
+  &:hover .collection__product__img img {
+    transform: scale(1.4);
+  }
+
+}
+.collection__product__img{
+  overflow: hidden;
+  height: 100%;
+  & img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+    transition: all ease-out 700ms;
+  }
+}
+.collection__product__details{
+  display: grid;
+  gap: .5rem;
+
+  & h1{
+    text-transform: capitalize;
+    font-size: 1.6rem;
+    font-weight: 500;
+  }
+
+  & div{
+    display: flex;
+
+    & div svg{
+      width: 1.6rem;
+      color: rgb(0 0 0 /.3);
+
+    }
+    & span{
+      font-size: 1.4rem;
+      font-weight: 400;
+      margin-left: 1.2rem;
+      color: rgb(0 0 0 /.45);
+    }
+  }
+
+  & p{
+    margin-top: 1.3rem;
+    color: red;
+    font-weight: 500;
+  }
+}
+.collection__product__action{
+  display: flex;
+  gap: .5rem;
+
+  & button {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    background-color: rgb(0 0 0 /.65);
+    width: max-content;
+    border-radius: .3rem;
+    cursor: pointer;
+    border: none;
+
+    & span{
+      padding-inline: 0 1rem;
+      text-transform: capitalize;
+      font-weight: 500;
+      color: white;
+    }
+  }
+
+  & svg {
+    width: 2.4rem;
+    color: white;
+    padding: .5rem .8rem;
+    background-color: black;
+    box-sizing: content-box;
+    border-radius: .3rem;
+  }
+
+  & > button.hart__icon, & > button.reload__icon{
+    opacity: .2;
+    transition: all .3s;
+
+    &:hover{
+      opacity: 1;
+    }
+  }
+
+}
+.collection__product__new{
+  position: absolute;
+  right: 1.5rem;
+  top: 1.5rem;
+  border-radius: 5rem;
+  border: .1rem solid red;
+  color: red;
+  padding: .5rem 1.5rem;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 1.4rem;
+}

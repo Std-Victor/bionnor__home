@@ -1,0 +1,173 @@
+.testimonial__carousel{
+  overflow: hidden;
+  padding: 5rem 2rem 2rem;
+  position: relative;
+  width: 100%;
+  
+  @media screen and (min-width: 1025px) and (max-width: 1200px) {
+    width: 88rem;
+  }
+
+  @media screen and (max-width: 1024px){
+    width: 44rem;
+  }
+
+}
+.inner{
+  display: flex;
+  gap: 6rem;
+  transition: transform .3s;
+}
+.testimonial__item{
+  display: inline-flex;
+  flex-direction: column;
+  padding: 2.8rem;
+  gap: 1rem;
+  height: 21rem;
+  min-width: 38rem;
+  background-color: #EFD9C4;
+
+  & > p{
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 127.19%;
+    position: relative;
+    z-index: 1;
+
+    &::before, &::after{
+      content: ',,';
+      display: block;
+      font-family: "Playfair Display";
+      font-size: 35rem;
+      letter-spacing: -2.5rem;
+      position: absolute;
+      font-weight: 900;
+      color: #FCF8EF;
+      text-shadow: 0 0 13px rgb(0 0 0 /.05);
+    }
+
+    &::before{
+      transform: rotate(-172.93deg);
+      bottom: -5.5rem;
+      z-index: -1;
+    }
+
+    &::after{
+      right: 0;
+      top: 23rem;
+      transform: matrix(1, 0.06, 0.06, -1, 0, 0);
+      z-index: -5;
+    }
+  }
+
+}
+
+.testimonial__user{
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  background-color: rgba(252, 248, 239, 0.15);
+  backdrop-filter: blur(2.5px);
+  z-index: 100;
+
+  & > div{
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+  }
+
+  & .user__img__container{
+    width: 6rem;
+    height: 6rem;
+    border-radius: 50%;
+    overflow: hidden;
+    & img{
+      width: 100%;
+      height: 100%;
+      display: block;
+      object-fit: cover;
+    }
+  }
+
+  & .user__info__container{
+    & > p:first-child{
+      font-weight: 500;
+      font-size: 1.6rem;
+    }
+
+    & > p:last-child{
+      font-weight: 300 ;
+      font-size: 1.2rem;
+    }
+  }
+
+}
+
+.user__review{
+  & > div > svg{
+    width: 1.3rem;
+    height: 1.3rem;
+    color: #CD991280;
+
+  }
+  & > p {
+    font-size: 1.2rem;
+    font-weight: 500;
+    letter-spacing: -1px;
+  }
+}
+
+
+.indicators {
+  display: flex;
+  justify-content: center;
+
+  & > button[value= "prev"], & > button[value="next"]{
+    position: absolute;
+    top: 0;
+    padding-inline: 2rem;
+    height: 100%;
+    opacity: .12;
+    margin: 0;
+    cursor: pointer;
+    transition: all ease-out 700ms;
+    border: none;
+    font-weight: 700;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: .01rem;
+
+    &:hover {
+      opacity: .5;
+      letter-spacing: .3rem;
+    }
+  }
+
+  & > button[value= "prev"] {
+    left: 0;
+  }
+
+  & > button[value="next"] {
+    right: 0;
+  }
+
+  & .dotes{
+    display: flex;
+    gap: .5rem;
+    margin-top: 1.5vh;
+
+    & > span{
+      width: .8rem;
+      height: .8rem;
+      background-color:#B72A3680;
+      border-radius: .4rem;
+      transition: all ease-out 700ms;
+      cursor: pointer;
+    }
+
+    & span.active{
+      width: 4.8rem;
+      background-color: #B72A36;
+    }
+  }
+}
