@@ -1,0 +1,6 @@
+.idea
+node_modules
+.gitignore
+
+src/components/collectionProduct
+src/data.json
