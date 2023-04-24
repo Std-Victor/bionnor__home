@@ -2,5 +2,6 @@
 node_modules
 .gitignore
 
+src/components/carousel_
 src/components/collectionProduct
 src/data.json
